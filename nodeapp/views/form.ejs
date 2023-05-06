@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Registration Form</title>
+  <link rel="icon" type="image/x-icon" href="../Yashoda1.png">
+  
+<style>
+
+    h1{
+  
+      display: flex;
+  
+      flex-direction: row;
+  
+      font-family: Arial, Helvetica, sans-serif;
+  
+      font-size: 45px;
+  
+      justify-content: center;
+  
+      color: rgb(178, 23, 126)
+  
+    }
+  
+    .form-container{
+  
+      display: flex;
+  
+      justify-content: center;
+  
+      /* border: 1px solid black;*/
+  
+    }
+  
+    form{
+  
+      display: flex;
+  
+      flex-direction: column;
+  
+      align-items: center;
+  
+      /* border: 1px solid black; */
+  
+    }
+  
+    form input{
+  
+      width: 500px;
+  
+      font-size: 20px;
+  
+      padding: 10px;
+  
+      margin: 10px 0px;
+  
+      border-radius: 10px;
+  
+    }
+  
+    #submit-btn{
+  
+      width: 200px;
+  
+      background-color: rgb(24, 159, 159);
+  
+      color: white;
+  
+      font-family:Arial, Helvetica, sans-serif;
+  
+      font-weight : 700;
+  
+    }
+  
+    select{
+  
+      width: 520px;
+  
+      font-size: 20px;
+  
+      padding: 10px;
+  
+      margin: 10px 0px;
+  
+      border: 4px thick black;
+  
+      border-radius: 10px;
+  
+    }
+  
+  </style>
+  
+</head>
+
+
+<body style="background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">
+   
+  <h1>Registration Form</h1>
+
+  <div class="form-container">
+
+    <form action="#" method="post">
+
+      <input type="text" name="FullName" placeholder="Enter Your Full Name" required>
+
+      <input type="email" name="email" placeholder="Enter Email Id" required>
+
+      <input type="tel" name="contactNo" placeholder="Enter Contact Number" required>
+
+      <input type="text" name="Occupation" placeholder="Occupation" required>
+
+      <input type="number" name="Amount" placeholder="Ready to spend (₹)" required>
+
+      <!-- <select>
+
+        <option value="1500">1500</option>
+
+        <option value="4000">4000</option>
+
+        <option value="8000">8000</option>
+
+        <option value="12000">12000</option>
+
+        <option value="16000">16000</option>
+
+        <option value="20000">20000</option>
+
+      </select> -->
+
+      <input type="text" name="adopt" placeholder="Enter Child Id" required>
+
+      <input type="text" name="address" placeholder="Enter Your Address" required>
+
+      <input type="datetime-local" name="DateOfRegistration"placeholder="Enter date of registration">
+
+      <input type="submit" name="submit" value="submit" id="submit-btn">
+
+    </form>
+
+  </div>
+
+</body>
+
+</html>

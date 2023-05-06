@@ -1,0 +1,58 @@
+var mongoose=require('mongoose');
+var db = require('../database');
+var fs=require('fs');
+const { query } = require('express');
+const {UserModel,userTable2,userTable,userTable3,userTable4,userTable5,userTable6,UserModel2}=require('./user');
+
+const userData = [{
+   name: 'AArthi',
+   age:'8',
+   childId:'223A0501',
+   mobileNumber:'9975431234',
+   avatar: fs.readFileSync('./images/demo/gchild8.jpeg')
+},{
+   name: 'Aparna',
+   age:'13',
+   childId:'223A0502',
+   mobileNumber:'9975431234',
+   avatar: fs.readFileSync('./images/demo/gr13.jpeg')
+},{
+   name: 'Radha',
+   age:'12',
+   childId:'223A0503',
+   mobileNumber:'9975431234',
+   avatar: fs.readFileSync('./images/demo/girl12.jpeg')
+},{
+   name: 'Varsha',
+   age:'11',
+   childId:'223A0504',
+   mobileNumber:'9975431234',
+   avatar: fs.readFileSync('./images/demo/girl11.jpeg')
+},{
+   name: 'Harshika',
+   age:'9',
+   childId:'223A0505',
+   mobileNumber:'9975431234',
+   avatar: fs.readFileSync('./images/demo/girl9.jpeg')
+}]
+userData.forEach(function(data){
+
+var user = new userTable5(data);
+user.avatar.contentType = 'image/png';
+
+user.save()
+   .then(() => console.log('User Saved Successfully!'))
+   .catch((err) => console.log(`Error in Saving User: ${err}`));
+
+});
+//module.exports=userTable
+module.exports={
+     
+     fetchData:function(callback){
+        var userData=userTable5.find({});
+        userData.exec(function(err, data){
+         if(err) throw err;
+         return callback(data);
+     }); 
+     }
+}

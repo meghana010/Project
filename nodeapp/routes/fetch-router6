@@ -1,0 +1,8 @@
+var express = require('express');
+var router6 = express.Router();
+var fetchController6= require('../controllers/fetch-controller6');
+
+router6.get('/fetch6',fetchController6.fetchData);
+
+
+module.exports = router6;

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save for later</title>
+    <link rel="icon" type="image/x-icon" href="../Yashoda1.png">
+    <style>
+        .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+marquee{
+    font-weight: 900px;
+    font-style: italic;
+    color:black;
+    font-size:x-large
+
+    
+}
+
+    </style>
+</head>
+<body>
+
+<center> 
+    <marquee width="60%" direction="left" height="100px">
+        Read the <a href="/Guidelines.html">guidelines </a> thoroughly .You need to enter the correct details for withdrawal of adoption . Make sure you save the below information.
+        </marquee> 
+    <%
+
+   if(tabledata.length!=0){
+
+   tabledata.forEach(function(data){
+
+   %>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th colspan="2" style="text-align: center;">Please Save The Below Details For Future Reference</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>FullName</td>
+                <td><%=data.FullName%></td>
+            </tr>
+            <tr class="active-row">
+                <td>Email Id</td>
+                <td><%=data.email%></td>
+            </tr>
+            <tr>
+                <td>ContactNo</td>
+                <td><%=data.contactNo%></td>
+            </tr>
+            <tr class="active-row">
+                <td>Occupation</td>
+                <td><%=data.Occupation %></td>
+            </tr>
+            <tr>
+                <td>Amount</td>
+                <td><%=data.Amount %></td>
+            </tr>
+            <tr class="active-row">
+                <td>ChildId</td>
+                <td><%=data.adopt%></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><%=data.address%></td>
+            </tr>
+            <tr class="active-row">
+                <td>Date Of Registration</td>
+                <td><%=data.DateOfRegistration%></td>
+            </tr>
+        </tbody>
+        <% }) %>
+  <% } %>
+    </table>
+</center>
+</body>
+</html>

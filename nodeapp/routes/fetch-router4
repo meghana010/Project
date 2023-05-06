@@ -1,0 +1,8 @@
+var express = require('express');
+var router4 = express.Router();
+var fetchController4= require('../controllers/fetch-controller4');
+
+router4.get('/fetch4',fetchController4.fetchData);
+
+
+module.exports = router4;

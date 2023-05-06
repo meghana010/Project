@@ -1,0 +1,8 @@
+var express = require('express');
+var router3 = express.Router();
+var fetchController3= require('../controllers/fetch-controller3');
+
+router3.get('/fetch3',fetchController3.fetchData);
+
+
+module.exports = router3;

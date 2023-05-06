@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <%#   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> %>
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/x-icon" href="../Yashoda1.png">
+
+    <title>Profiles</title>
+
+ <%#   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> %>
+
+  </head>
+
+  <body>
+
+   <%
+
+   if(userData.length!=0){
+
+   userData.forEach(function(data){
+
+   %>
+
+   <div class="profile-card ">
+
+     <div class="img">
+
+      <img src="data:image/png;base64,
+
+ <%=data.avatar.toString('base64')%>" width='1080px' alt=""/>
+
+     </div>
+
+     <div class="caption">
+
+<h3>Name:<%=data.name %></h3>
+
+<p>Age:<%=data.age %></p>
+<p>ChildId:<%=data.childId %></p>
+<a href="/adptform" ><button id="change">Adopt / Withdraw</button></a>
+<%
+if(typeof data.adopted!== 'undefined' && data.adopted.length!=0)
+{ %>
+    <p style="color:rgb(8, 230, 189)"><%=data.adopted %></p>
+   <%# <script>var x=document.getElementById("change");
+    x.innerText="Withdraw"</script>  %>
+    <% } %>
+
+</div>
+
+   </div>
+
+   <% }) %>
+
+   <% } else{ %>
+
+     <td colspan="7">No Data Found</td>
+
+   <% } %>
+
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</html>   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
