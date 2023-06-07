@@ -91,6 +91,6 @@ address:String,
 DateOfRegistration:Date,
 
 });
-const UserModel2 = mongoose.model("studentform", UserSchema,'studentform')
+const UserModel2 = mongoose.model("studentform", UserSchema2,'studentform')
 const UserModel = mongoose.model("form", UserSchema,'form')
 module.exports ={UserModel,userTable2,userTable,userTable3,userTable4,userTable5,userTable6,UserModel2}

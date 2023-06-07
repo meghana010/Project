@@ -1,0 +1,47 @@
+body{/*
+    background-image: linear-gradient(grey,pink);
+    fill: ; */
+    
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+body{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+font-style: oblique;
+color: rgba(255, 0, 128, 0.788);
+text-align: center;
+text-decoration-style: solid;
+
+}
+img{
+    width:600px;
+    height:500px;
+}
+p{
+    font-weight: 400;
+    
+}
+.container{
+
+    background-image:"C:\Users\mouni\OneDrive\Desktop\New folder\Project\static\images\demo\adoptionProcess.png";
+    border-radius: 10px;
+    text-align:justify;
+    width: 600px;
+    padding:20px 20px 20px 20px;
+}
+.container:hover{
+    color: rgb(37, 5, 153);
+    background-color: white;
+}
+marquee{
+    font-weight: 800px;
+    font-style: italic;
+    color: orchid;
+    
+}
+

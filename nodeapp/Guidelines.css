@@ -29,6 +29,6 @@ body{
 
 
 }
-.points:hover{
-font-weight:700 ;
+li:hover{
+font-weight:800 ;
 }
