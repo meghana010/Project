@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb+srv://yashoda:yashoda@clustermain.aefiuqp.mongodb.net/nodeapp",
+  "mongodb+srv://20311A0504:meghana1234@cluster0.qhzkco7.mongodb.net/nodeapp",
   { useNewUrlParser: true }
 );
 var conn = mongoose.connection;
